@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag("navbar.css") %>
+
+  <div class="row first-row">
+
+
+      <div class="nav-menu">
+      <%= link_to "Home", root_path, class:"nav-anchor home" %>
+            <%= link_to "FAQ", home_faq_path, class:"nav-anchor about" %>
+                  <%= link_to "Contact", home_contact_path, class:"nav-anchor contact" %>
+                                    <%= link_to "Submissions", home_submissions_path, class:"nav-anchor contact" %>
+       </div>
+      </div>
+
+  <div class="row header-row-2">
+        <div class="red-row-container col-xl-8 col-8">
+            <a href="/"><%= image_tag("logo.svg", style:"height: 140px; width: 140px", class:"header-logo") %></a>
+            <h1 class="text-1"> VIGILCOMICS </h1>
+
+              <div class="social-media">
+                  <a href="/">      <%= image_tag("insta.svg", style:"height: 60px; width: 60px", class:"social-icon") %></a>
+                  <a href="/">      <%= image_tag("twitter.svg", style:"height: 60px; width: 60px", class:"social-icon") %></a>
+                  <a href="/">      <%= image_tag("facebook.svg", style:"height: 60px; width: 60px", class:"social-icon") %></a>
+              </div>_
+        </div>
+  </div>

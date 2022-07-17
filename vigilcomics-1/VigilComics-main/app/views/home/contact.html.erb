@@ -1,0 +1,36 @@
+<%= render "layouts/navbar" %>
+<% stylesheet_link_tag("contact.css") %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="contact-container col-xl-7">
+      <div class="contact-sub-container">
+      <h1 class="text-2"> Contact  </h1>
+
+      <h6> Have a question that's <%= link_to "not addressed in our FAQ?", home_faq_path %> Contact us below.</h6>
+
+      <h6 style="margin-top: 15px;"> You can also send an e-mail to: <a href="mailto:support@example.com">info@vigilcomics.com</a> </h6>
+      </div>
+          <div class="form" style="margin-top: 5%;">
+            <%= form_tag home_contact_path do %>
+              <div class="form-group col-6">
+                <%= label_tag "email", "Email Address", class:"form-label" %>
+                <%= text_field_tag "email", nil, class:"form-control" %>
+              </div>
+              <div class="form-group message-group">
+                <%= label_tag "message", "Message", class:"form-label" %>
+                <%= text_area_tag "message", nil, class:"form-control", rows: 9 %>
+              </div>
+              <div class="form-group" style="margin-top: 20px;">
+           <%= submit_tag "Send Message", class:"btn btn-primary col-xl-3 col-6 btn-lg" %>
+              </div>
+            <% end %>
+
+          </div>
+
+
+  </div>
+ </div>
+</div>
+
+
+<%= render "layouts/footer" %>

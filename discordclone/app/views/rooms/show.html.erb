@@ -1,0 +1,19 @@
+  <%= link_to "Back to rooms", rooms_path %>
+<p style="color: green"><%= notice %></p>
+<%= render @room %>
+<%= button_to "Destroy this room", @room, method: :delete %>
+</div>
+<%= turbo_stream_from "message_list"%>
+<div style="height: 400px; overflow-y: scroll; " id="messages">
+  <% @room.messages.each do |message|%>
+    <%= render message %><% end %>
+</div>
+<div>
+  <%= render "messages/form", message: @message %>
+  <script>
+    const scrollToBottom = (id) => {
+    const element = document.getElementById(id);
+    element.scrollTop = element.scrollHeight;
+    }
+    scrollToBottom('messages');
+  </script>
